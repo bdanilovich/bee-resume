@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bryan's Bee Resume</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%9D%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Application for literally any position at Barnes Backyard Bees LLC.">
+<meta property="og:title" content="Bryan: Application for Literally Any Position">
+<meta property="og:description" content="Bee Whisperer (whispering because I'm hiding). Sales Closer. AI Enthusiast. Professional Jar Opener.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fffaf0;
+    --cream: #fdf1d6;
+    --honey: #f2a900;
+    --honey-light: #ffd25e;
+    --amber: #b86e00;
+    --amber-dark: #7a4500;
+    --ink: #2b1d0e;
+    --ink-soft: #5c4630;
+    --red: #c8352b;
+    --line: #ecd9ad;
+    --bg: #f7e3b0;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font: 400 16px/1.55 "DM Sans", system-ui, sans-serif;
+    background-color: var(--bg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23e2b54a' stroke-opacity='.55' stroke-width='2'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='%23e2b54a' stroke-opacity='.55' stroke-width='2'/%3E%3C/svg%3E");
+    overflow-x: hidden;
+  }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; margin: 0; line-height: 1.1; }
+
+  .page {
+    position: relative;
+    max-width: 1040px;
+    margin: 40px auto 64px;
+    background: var(--paper);
+    border-radius: 18px;
+    box-shadow: 0 2px 0 var(--line), 0 24px 60px -20px rgba(122, 69, 0, .45);
+    overflow: hidden;
+  }
+
+  /* ---------- Header ---------- */
+  .masthead {
+    position: relative;
+    background: linear-gradient(160deg, var(--honey-light), var(--honey) 60%, #e89a00);
+    padding: 48px 48px 72px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 36px;
+    align-items: center;
+  }
+  .drip { position: absolute; left: 0; right: 0; bottom: -58px; width: 100%; height: 60px; display: block; z-index: 1; }
+  .drip path { fill: #eba000; }
+
+  .headshot {
+    position: relative;
+    width: 200px;
+    aspect-ratio: 1 / 1.08;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    background: var(--paper);
+    transition: transform .2s;
+  }
+  .headshot-wrap { position: relative; width: 200px; filter: drop-shadow(0 6px 0 var(--amber)); }
+  .headshot svg, .headshot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .headshot-wrap.scared .headshot { animation: shake .12s linear infinite; }
+  .nope {
+    position: absolute; top: -8px; right: -24px; z-index: 3;
+    font: 700 24px/1 "Caveat", cursive; color: var(--paper);
+    background: var(--red); padding: 6px 12px 8px; border-radius: 14px;
+    transform: rotate(8deg) scale(0); transition: transform .15s;
+  }
+  .headshot-wrap.scared .nope { transform: rotate(8deg) scale(1); }
+  @keyframes shake {
+    0% { transform: translate(0, 0) rotate(0); }
+    25% { transform: translate(-3px, 1px) rotate(-2deg); }
+    50% { transform: translate(2px, -2px) rotate(1deg); }
+    75% { transform: translate(-2px, 2px) rotate(-1deg); }
+    100% { transform: translate(0, 0) rotate(0); }
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--amber-dark); background: rgba(255,250,240,.6);
+    padding: 4px 10px; border-radius: 999px; margin-bottom: 14px;
+  }
+  .masthead h1 { font-size: clamp(40px, 6vw, 68px); font-weight: 900; letter-spacing: -.02em; color: var(--ink); }
+  .role { font: 800 clamp(18px, 2.2vw, 22px)/1.25 "Fraunces", serif; color: var(--amber-dark); margin: 10px 0 14px; }
+  .titles { font-size: 15px; color: var(--ink); margin: 0 0 18px; }
+  .titles span + span::before { content: "·"; margin: 0 8px; color: var(--amber-dark); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font-size: 13px; font-weight: 500; background: var(--paper); border: 2px solid var(--ink); border-radius: 999px; padding: 4px 12px; }
+
+  .stamp {
+    position: absolute; top: 28px; right: 32px;
+    font: 900 18px/1 "Fraunces", serif; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--red); border: 3px solid var(--red); border-radius: 8px;
+    padding: 8px 12px; transform: rotate(9deg); opacity: .85;
+    background: rgba(255,250,240,.35);
+  }
+  .stamp small { display: block; font: 700 11px/1.3 "DM Sans", sans-serif; letter-spacing: .1em; }
+
+  .attn { padding: 84px 48px 0; font: 700 26px/1.2 "Caveat", cursive; color: var(--ink-soft); }
+  .attn b { color: var(--amber-dark); }
+
+  /* ---------- Body grid ---------- */
+  .body { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 40px; padding: 20px 48px 40px; }
+  .side { display: flex; flex-direction: column; gap: 28px; }
+  .main { display: flex; flex-direction: column; gap: 32px; }
+
+  h2 {
+    font-size: 15px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--amber-dark); display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+  }
+  h2::before {
+    content: ""; width: 14px; height: 16px; flex: none; background: var(--honey);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  }
+  h2::after { content: ""; flex: 1; height: 2px; background: var(--line); }
+
+  .objective p { margin: 0; font: 600 21px/1.4 "Fraunces", serif; }
+
+  .job + .job { margin-top: 22px; }
+  .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; align-items: baseline; }
+  .job h3 { font-size: 20px; font-weight: 800; }
+  .job .where { color: var(--ink-soft); font-style: italic; }
+  .job .when { font-size: 13px; font-weight: 700; color: var(--amber); white-space: nowrap; }
+  ul { margin: 8px 0 0; padding-left: 0; list-style: none; }
+  li { position: relative; padding-left: 22px; margin: 6px 0; }
+  li::before {
+    content: ""; position: absolute; left: 2px; top: .5em; width: 10px; height: 11px; background: var(--honey);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  }
+  q, .quote { font-style: italic; }
+  .scribble { font: 700 21px/1 "Caveat", cursive; color: var(--red); white-space: nowrap; }
+
+  .edu p { margin: 0 0 10px; }
+  .edu b { font-family: "Fraunces", serif; font-weight: 800; }
+
+  /* Polaroid (optional image) */
+  .polaroid {
+    margin: 0; align-self: center; width: min(100%, 420px);
+    background: #fff; padding: 12px 12px 14px; border-radius: 4px;
+    box-shadow: 0 10px 30px -10px rgba(43,29,14,.4); transform: rotate(-1.5deg);
+  }
+  .polaroid img { display: block; width: 100%; height: auto; border-radius: 2px; }
+  .polaroid figcaption { font: 700 21px/1.2 "Caveat", cursive; text-align: center; margin-top: 10px; color: var(--ink-soft); }
+
+  /* Sidebar cards */
+  .card { background: var(--cream); border-radius: 14px; padding: 18px 20px; }
+  .meter { margin: 12px 0 0; }
+  .meter-label { display: flex; justify-content: space-between; font-size: 14px; font-weight: 500; }
+  .meter-label b { font-weight: 700; color: var(--amber-dark); }
+  .bar { position: relative; height: 12px; margin-top: 5px; background: #fff; border: 2px solid var(--ink); border-radius: 999px; }
+  .fill {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 0;
+    background: linear-gradient(180deg, var(--honey-light), var(--honey));
+    border-radius: 999px; transition: width 1.4s cubic-bezier(.2,.8,.2,1);
+  }
+  .meter.low .fill { background: linear-gradient(180deg, #f59a8f, var(--red)); }
+  .meter.over .bar { border-color: var(--red); }
+  .meter.over .fill { background: linear-gradient(180deg, #f59a8f, var(--red)); border-radius: 999px 0 0 999px; }
+  .meter.over .fill::after {
+    content: ""; position: absolute; right: -4px; top: 100%; width: 10px; height: 14px;
+    background: var(--red); border-radius: 0 0 50% 50% / 0 0 70% 70%;
+  }
+  .meter-note { font: 700 18px/1 "Caveat", cursive; color: var(--red); margin-top: 6px; }
+
+  .side-list { margin: 0; }
+  .side-list li { font-size: 15px; }
+  .growth li::before { background: var(--red); }
+
+  .price-tag {
+    position: relative; background: var(--ink); color: var(--paper);
+    border-radius: 14px; padding: 20px 20px 18px;
+  }
+  .price-tag h2 { color: var(--honey-light); }
+  .price-tag h2::after { background: rgba(255,250,240,.2); }
+  .price-tag p { margin: 0; font-size: 15px; }
+  .price-tag .big { font: 900 30px/1 "Fraunces", serif; color: var(--honey-light); display: block; margin-bottom: 8px; }
+
+  /* Why hire / references */
+  .why li { font-size: 16.5px; }
+  .refs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .ref { background: var(--cream); border-radius: 14px; padding: 16px 16px 14px; display: flex; flex-direction: column; gap: 8px; }
+  .ref .who { font: 800 15px/1.2 "Fraunces", serif; }
+  .ref .org { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--amber); }
+  .ref p { margin: 0; font-size: 15px; }
+  .ref .aside { font-size: 13px; color: var(--ink-soft); }
+
+  /* ---------- Footer / decision ---------- */
+  .decision {
+    margin: 0 48px 40px; padding: 28px; border-radius: 16px;
+    background: var(--cream); border: 2px dashed var(--honey);
+    text-align: center;
+  }
+  .decision h3 { font-size: 26px; font-weight: 900; }
+  .decision p { margin: 6px 0 0; color: var(--ink-soft); }
+  .actions { position: relative; height: 112px; margin-top: 12px; }
+  .btn {
+    font: 700 17px/1 "DM Sans", sans-serif; border-radius: 999px; padding: 15px 26px;
+    border: 2px solid var(--ink); cursor: pointer; white-space: nowrap;
+  }
+  .btn-hire {
+    position: absolute; left: 50%; top: 18px; transform: translateX(calc(-100% - 8px));
+    background: var(--honey); color: var(--ink); box-shadow: 0 4px 0 var(--ink);
+  }
+  .btn-hire:hover { background: var(--honey-light); }
+  .btn-hire:active { transform: translateX(calc(-100% - 8px)) translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+  .btn-reject {
+    position: absolute; left: calc(50% + 8px); top: 18px;
+    background: var(--paper); color: var(--ink-soft);
+    transition: left .25s cubic-bezier(.3,1.4,.5,1), top .25s cubic-bezier(.3,1.4,.5,1);
+  }
+  .fine { font-size: 12.5px; color: var(--ink-soft); text-align: center; padding: 0 48px 32px; margin: 0; }
+
+  dialog {
+    border: 3px solid var(--ink); border-radius: 18px; padding: 28px 28px 24px;
+    max-width: min(440px, calc(100vw - 32px)); background: var(--paper); color: var(--ink);
+    text-align: center; box-shadow: 0 8px 0 var(--ink);
+  }
+  dialog::backdrop { background: rgba(43,29,14,.55); }
+  dialog h3 { font-size: 30px; font-weight: 900; margin-bottom: 10px; }
+  dialog p { margin: 0 0 18px; }
+  dialog .btn { background: var(--honey); box-shadow: 0 4px 0 var(--ink); }
+
+  /* ---------- Bees ---------- */
+  .bee {
+    position: fixed; left: 0; top: 0; width: 54px; height: 42px; z-index: 50;
+    cursor: pointer; will-change: transform; pointer-events: auto;
+  }
+  .bee svg { width: 100%; height: 100%; display: block; overflow: visible; }
+  .wings { transform-origin: 30px 22px; animation: flap .09s linear infinite alternate; }
+  @keyframes flap { from { transform: scaleY(1); } to { transform: scaleY(.55); } }
+  .confetti-bee { position: fixed; width: 34px; height: 26px; z-index: 60; pointer-events: none; }
+  .confetti-bee svg { width: 100%; height: 100%; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 820px) {
+    .page { margin: 16px 16px 40px; border-radius: 14px; }
+    .masthead { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 56px 20px 60px; gap: 22px; }
+    .chips { justify-content: center; }
+    .headshot-wrap, .headshot { width: 170px; }
+    .stamp { top: 14px; right: 12px; font-size: 13px; padding: 6px 8px; }
+    .stamp small { font-size: 9px; }
+    .attn { padding: 72px 20px 0; font-size: 23px; text-align: center; }
+    .body { grid-template-columns: 1fr; padding: 20px 20px 32px; gap: 32px; }
+    .side { order: 2; }
+    .main { order: 1; }
+    .refs { grid-template-columns: 1fr; }
+    .decision { margin: 0 20px 32px; padding: 22px 16px; }
+    .actions { height: 170px; }
+    .btn-hire, .btn-hire:active { left: 50%; transform: translateX(-50%); }
+    .btn-reject { left: 50%; top: 92px; transform: translateX(-50%); }
+    .fine { padding: 0 20px 28px; }
+    .titles span { display: block; }
+    .titles span + span::before { content: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wings, .headshot-wrap.scared .headshot { animation: none; }
+    .fill, .btn-reject { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Shared bee drawing -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="beeBody"><ellipse cx="30" cy="30" rx="19" ry="13"/></clipPath>
+    <pattern id="mesh" width="5" height="5" patternUnits="userSpaceOnUse">
+      <path d="M0 0L5 5M5 0L0 5" stroke="#2b1d0e" stroke-width=".6" stroke-opacity=".5"/>
+    </pattern>
+    <symbol id="bee" viewBox="0 0 64 48">
+      <g class="wings">
+        <ellipse cx="23" cy="13" rx="9" ry="12" transform="rotate(-25 23 13)" fill="#fff" fill-opacity=".9" stroke="#2b1d0e" stroke-width="2"/>
+        <ellipse cx="35" cy="12" rx="8" ry="11" transform="rotate(20 35 12)" fill="#fff" fill-opacity=".9" stroke="#2b1d0e" stroke-width="2"/>
+      </g>
+      <path d="M12 31 L4 32 L12 35 Z" fill="#2b1d0e"/>
+      <ellipse cx="30" cy="30" rx="19" ry="13" fill="#ffc21a"/>
+      <g clip-path="url(#beeBody)" fill="#2b1d0e">
+        <rect x="20" y="10" width="6" height="40"/>
+        <rect x="32" y="10" width="6" height="40"/>
+      </g>
+      <ellipse cx="30" cy="30" rx="19" ry="13" fill="none" stroke="#2b1d0e" stroke-width="2.4"/>
+      <circle cx="43" cy="27" r="2.6" fill="#2b1d0e"/>
+      <circle cx="43.8" cy="26.2" r=".9" fill="#fff"/>
+      <path d="M44 34 q3 2 5 -1" fill="none" stroke="#2b1d0e" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M42 18 Q46 10 52 8" fill="none" stroke="#2b1d0e" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="52.5" cy="7.5" r="2.4" fill="#2b1d0e"/>
+    </symbol>
+  </defs>
+</svg>
+
+<main class="page">
+
+  <header class="masthead">
+    <div class="headshot-wrap" id="headshot">
+      <div class="headshot">
+        <!-- Fallback cartoon: shows until images/headshot.png exists -->
+        <svg viewBox="0 0 200 216" role="img" aria-label="Cartoon of Bryan in a beekeeping suit, looking terrified">
+          <rect width="200" height="216" fill="#fdf1d6"/>
+          <path d="M22 216 C22 162 58 146 100 146 C142 146 178 162 178 216 Z" fill="#f6f2e8" stroke="#2b1d0e" stroke-width="3"/>
+          <path d="M100 150 L100 216" stroke="#2b1d0e" stroke-width="2" stroke-dasharray="4 5"/>
+          <circle cx="100" cy="104" r="38" fill="#f2c9a2" stroke="#2b1d0e" stroke-width="3"/>
+          <circle cx="85" cy="100" r="11" fill="#fff" stroke="#2b1d0e" stroke-width="2.5"/>
+          <circle cx="115" cy="100" r="11" fill="#fff" stroke="#2b1d0e" stroke-width="2.5"/>
+          <circle cx="90" cy="98" r="3.5" fill="#2b1d0e"/>
+          <circle cx="120" cy="98" r="3.5" fill="#2b1d0e"/>
+          <path d="M73 83 Q84 74 94 82 M106 82 Q116 74 127 83" fill="none" stroke="#2b1d0e" stroke-width="3" stroke-linecap="round"/>
+          <path d="M84 126 q4 -6 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#2b1d0e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M136 86 q6 9 0 13 q-6 -4 0 -13Z" fill="#8fd0f0" stroke="#2b1d0e" stroke-width="1.5"/>
+          <path d="M40 66 L50 152 L150 152 L160 66 Z" fill="url(#mesh)" stroke="#2b1d0e" stroke-width="2" stroke-opacity=".5"/>
+          <path d="M40 66 L50 152 L150 152 L160 66 Z" fill="#fff" fill-opacity=".18"/>
+          <path d="M66 66 C66 30 134 30 134 66 Z" fill="#efe8d6" stroke="#2b1d0e" stroke-width="3"/>
+          <ellipse cx="100" cy="66" rx="64" ry="12" fill="#efe8d6" stroke="#2b1d0e" stroke-width="3"/>
+          <use href="#bee" x="146" y="128" width="40" height="30"/>
+        </svg>
+        <img src="images/headshot.png" alt="Bryan in a beekeeping suit, looking terrified" onerror="this.remove()">
+      </div>
+      <span class="nope" aria-hidden="true">NOPE.</span>
+    </div>
+
+    <div>
+      <span class="eyebrow">Résumé · Application No. 0001</span>
+      <h1>Bryan Danilovich</h1>
+      <p class="role">Applicant: Literally Any Position at Barnes Backyard Bees LLC</p>
+      <p class="titles">
+        <span>Bee Whisperer <em>(whispering because I'm hiding)</em></span>
+        <span>Sales Closer</span>
+        <span>AI Enthusiast</span>
+        <span>Professional Jar Opener</span>
+      </p>
+      <div class="chips">
+        <span class="chip">📍 Wherever the honey is</span>
+        <span class="chip">✉️ Carrier pigeon or waggle dance</span>
+        <span class="chip">🐝 Min. bee distance: 40 ft</span>
+      </div>
+    </div>
+
+    <div class="stamp" aria-hidden="true">Overqualified<small>Certified · Probably</small></div>
+
+    <svg class="drip" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,0 V18 H98 C112,18 108,52 120,52 C132,52 128,18 142,18 H314 C324,18 321,38 330,38 C339,38 336,18 346,18 H494 C510,18 506,58 520,58 C534,58 530,18 546,18 H746 C755,18 752,34 760,34 C768,34 765,18 774,18 H918 C932,18 928,50 940,50 C952,50 948,18 962,18 H1092 C1103,18 1100,42 1110,42 C1120,42 1117,18 1128,18 H1200 V0 Z"/>
+    </svg>
+  </header>
+
+  <p class="attn">ATTN: <b>Jesse &amp; Jon Silas</b>, Co-CEOs</p>
+
+  <div class="body">
+
+    <!-- ===== Main column ===== -->
+    <div class="main">
+
+      <section class="objective">
+        <h2>Objective</h2>
+        <p>To help Northwest Georgia's fastest-growing kid-run honey empire scale from 17 hives to 17,000, while staying at least 40 feet from every one of them.</p>
+      </section>
+
+      <section>
+        <h2>Professional Experience</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <h3>Royal Advisor to the Queen</h3>
+            <span class="when">2019 – Present · Remote</span>
+          </div>
+          <div class="where">Hive #7</div>
+          <ul>
+            <li>Advise Her Majesty on succession planning and drone management, strictly over Zoom</li>
+            <li>Negotiated the Great Pollen Accord of 2021 from inside my car with the windows up</li>
+            <li>Talked the bees out of square honeycomb. You're welcome. <span class="scribble">← true story</span></li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <h3>Chief Sales Officer</h3>
+            <span class="when">Every Fair I've Ever Attended</span>
+          </div>
+          <div class="where">Booth Operations Division</div>
+          <ul>
+            <li>Can sell a $15 Solid Pillar Candle to a guy who came to Crabapple Fest for a funnel cake</li>
+            <li>Pioneered the Combo Upsell: <q>Getting the lip balm? For eight more dollars, add the hand cream. Your lips will be jealous.</q></li>
+            <li>Makes change for a $20 in under 0.4 seconds</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <h3>Director of Artificial Intelligence</h3>
+            <span class="when">Nights &amp; Weekends</span>
+          </div>
+          <div class="where">My Kitchen Table</div>
+          <ul>
+            <li>Built an AI that detects bees within 50 feet and texts me <b>"RUN"</b></li>
+            <li>Developing <b>BeeGPT</b> to answer every customer's three questions: <q>Is it raw?</q> <q>Is it local?</q> and <q>Does Hot Honey go on pizza?</q> (Yes.)</li>
+          </ul>
+        </div>
+      </section>
+
+      <figure class="polaroid">
+        <img src="images/booth.png" alt="Bryan hiding behind a honey booth while a single bee hovers nearby" onerror="this.closest('figure').remove()">
+        <figcaption>Me, hard at work. (Bee not pictured. Okay, the bee is pictured.)</figcaption>
+      </figure>
+
+      <section class="edu">
+        <h2>Education</h2>
+        <p><b>Ph.D., Apiology</b>, University of the Hive<br>
+          Dissertation: <em>"Why Are They Always So Busy?"</em> (researched entirely online)</p>
+        <p><b>M.B.A.</b> (Master of Bee-siness Administration), <em>summa cum honey</em></p>
+        <p><b>Intro to Beekeeping</b>: one YouTube video, 2x speed, eyes mostly closed</p>
+      </section>
+
+      <section class="why">
+        <h2>Why You Should Hire Me</h2>
+        <ul>
+          <li>You went from 2 hives to 17 in four years. That's <b>750% growth</b>. I'm in sales, so I'm legally required to point that out.</li>
+          <li>Your homepage still says you're 9 and 12. I noticed. That's attention to detail.</li>
+          <li>I take direction extremely well from people a third my age.</li>
+          <li>I understand the org chart: Co-CEOs → bees → honey → me.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>References</h2>
+        <div class="refs">
+          <div class="ref">
+            <div><div class="who">The Queen Bee</div><div class="org">Hive #7</div></div>
+            <p class="quote">"Bzzz bzz bzzzz bzz."</p>
+            <p class="aside">Translation: "He has never visited. Not once."</p>
+          </div>
+          <div class="ref">
+            <div><div class="who">My Car</div><div class="org">Emergency Shelter</div></div>
+            <p class="quote">"He has hidden in me 11 times this summer."</p>
+          </div>
+          <div class="ref">
+            <div><div class="who">My AI Assistant</div><div class="org">The Cloud</div></div>
+            <p class="quote">"Bryan is a highly motivated, results-driven professional."</p>
+            <p class="aside">(He told me to say this.)</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Sidebar ===== -->
+    <aside class="side">
+      <section class="card">
+        <h2>Core Skills</h2>
+        <div class="meter" data-value="98"><div class="meter-label"><span>Sales &amp; Upselling</span><b>98%</b></div><div class="bar"><div class="fill"></div></div></div>
+        <div class="meter" data-value="95"><div class="meter-label"><span>AI &amp; Automation</span><b>95%</b></div><div class="bar"><div class="fill"></div></div></div>
+        <div class="meter" data-value="100"><div class="meter-label"><span>Opening Jars (any jar)</span><b>100%</b></div><div class="bar"><div class="fill"></div></div></div>
+        <div class="meter" data-value="100"><div class="meter-label"><span>Hot Honey Taste-Testing</span><b>100%</b></div><div class="bar"><div class="fill"></div></div></div>
+        <div class="meter" data-value="100"><div class="meter-label"><span>Carrying Tables</span><b>100%</b></div><div class="bar"><div class="fill"></div></div></div>
+        <div class="meter low" data-value="2"><div class="meter-label"><span>Courage Near Bees</span><b>2%</b></div><div class="bar"><div class="fill"></div></div></div>
+        <div class="meter over" data-value="110"><div class="meter-label"><span>Fear of Bees</span><b>110%</b></div><div class="bar"><div class="fill"></div></div><div class="meter-note">it doesn't go higher. we tried.</div></div>
+      </section>
+
+      <section>
+        <h2>Languages</h2>
+        <ul class="side-list">
+          <li>English (fluent)</li>
+          <li>Bee (conversational, mostly the part that means "please go away")</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Honors</h2>
+        <ul class="side-list">
+          <li><b>Bee's Knees Award</b>, three years running</li>
+          <li>Voted <b>"Most Likely to Be Mistaken for a Flower"</b> (wore a yellow shirt once; worst day of my life)</li>
+        </ul>
+      </section>
+
+      <section class="growth">
+        <h2>Areas for Growth</h2>
+        <ul class="side-list">
+          <li>Terrified of bees. Working on it. <span class="scribble">(not working on it)</span></li>
+          <li>Have been known to eat the inventory</li>
+        </ul>
+      </section>
+
+      <section class="price-tag">
+        <h2>Salary Requirements</h2>
+        <span class="big">$3.00</span>
+        <p>One (1) Lip Balm Holder Keychain, a high five, and a written promise I'll never have to touch a frame.</p>
+      </section>
+    </aside>
+  </div>
+
+  <section class="decision">
+    <h3>The Co-CEOs' Decision</h3>
+    <p>Please choose carefully. Bryan is watching from a safe distance.</p>
+    <div class="actions" id="actions">
+      <button class="btn btn-hire" id="hire" type="button">Hire Bryan</button>
+      <button class="btn btn-reject" id="reject" type="button">Reject Application</button>
+    </div>
+  </section>
+
+  <p class="fine">Prepared exclusively for Barnes Backyard Bees LLC. No bees were approached in the making of this résumé.</p>
+</main>
+
+<div class="bee" id="bee" title="Click to shoo" role="img" aria-label="A bee flying around the page">
+  <svg viewBox="0 0 64 48"><use href="#bee"/></svg>
+</div>
+
+<dialog id="hired">
+  <h3>Excellent decision.</h3>
+  <p>Bryan will report for duty first thing Monday, from the parking lot. Payment is accepted in keychains.</p>
+  <button class="btn" type="button" id="closeHired">See you at a safe distance</button>
+</dialog>
+
+<script>
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Skill meters fill in when they scroll into view */
+  const fillMeter = m => { m.querySelector('.fill').style.width = Math.min(+m.dataset.value, 104) + '%'; };
+  const meters = document.querySelectorAll('.meter');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { fillMeter(e.target); io.unobserve(e.target); }
+    }), { threshold: 0.6 });
+    meters.forEach(m => io.observe(m));
+  } else {
+    meters.forEach(fillMeter);
+  }
+
+  /* The roaming bee */
+  const bee = document.getElementById('bee');
+  const headshot = document.getElementById('headshot');
+  const W = 54, H = 42;
+  let x = window.innerWidth - 120, y = 140, tx = x, ty = y, speed = 1.6, t = 0, facing = 1;
+
+  function pickTarget(far) {
+    const vw = window.innerWidth, vh = window.innerHeight;
+    const r = headshot.getBoundingClientRect();
+    // Every so often, go bother Bryan's headshot on purpose
+    if (!far && Math.random() < 0.3 && r.bottom > 0 && r.top < vh) {
+      tx = r.left + r.width / 2 + (Math.random() * 80 - 40);
+      ty = r.top + r.height / 2 + (Math.random() * 80 - 40);
+    } else {
+      tx = 20 + Math.random() * (vw - W - 40);
+      ty = 20 + Math.random() * (vh - H - 40);
+    }
+    speed = far ? 9 : 1.2 + Math.random() * 1.4;
+  }
+
+  function place() {
+    bee.style.transform = `translate(${x}px, ${y}px) scaleX(${facing})`;
+  }
+
+  function tick() {
+    t += 0.05;
+    const dx = tx - x, dy = ty - y, d = Math.hypot(dx, dy);
+    if (d < 6) { pickTarget(false); }
+    else {
+      x += dx / d * Math.min(speed, d);
+      y += dy / d * Math.min(speed, d) + Math.sin(t * 3) * 0.9;
+      if (Math.abs(dx) > 2) facing = dx > 0 ? 1 : -1;
+      if (speed > 2) speed *= 0.97;
+    }
+    const r = headshot.getBoundingClientRect();
+    const near = Math.hypot(x + W / 2 - (r.left + r.width / 2), y + H / 2 - (r.top + r.height / 2)) < r.width * 0.85;
+    headshot.classList.toggle('scared', near);
+    place();
+    requestAnimationFrame(tick);
+  }
+
+  if (reduceMotion) {
+    x = window.innerWidth - 80; y = window.innerHeight - 70; place();
+  } else {
+    pickTarget(false); place(); requestAnimationFrame(tick);
+    bee.addEventListener('click', () => pickTarget(true));
+  }
+
+  /* The un-clickable reject button */
+  const reject = document.getElementById('reject');
+  const actions = document.getElementById('actions');
+  const lines = ['Reject Application', 'Are you sure?', 'Really?', 'Think of the keychain', 'Nope', 'Not happening', 'Try the other one'];
+  let dodges = 0;
+  function dodge(e) {
+    if (e) e.preventDefault();
+    dodges++;
+    reject.textContent = lines[Math.min(dodges, lines.length - 1)];
+    const a = actions.getBoundingClientRect();
+    const bw = reject.offsetWidth, bh = reject.offsetHeight;
+    const hire = document.getElementById('hire').getBoundingClientRect();
+    let nx, ny, tries = 0;
+    do {
+      nx = Math.random() * (a.width - bw);
+      ny = Math.random() * (a.height - bh);
+      tries++;
+    } while (tries < 30 && nx + a.left < hire.right + 10 && nx + a.left + bw > hire.left - 10 && ny + a.top < hire.bottom + 10 && ny + a.top + bh > hire.top - 10);
+    reject.style.transform = 'none';
+    reject.style.left = nx + 'px';
+    reject.style.top = ny + 'px';
+  }
+  reject.addEventListener('mouseenter', dodge);
+  reject.addEventListener('pointerdown', dodge);
+  reject.addEventListener('focus', () => dodge());
+  reject.addEventListener('click', e => { e.preventDefault(); dodge(); });
+
+  /* Hire: celebration */
+  const dialog = document.getElementById('hired');
+  document.getElementById('hire').addEventListener('click', () => {
+    if (!reduceMotion) beeConfetti();
+    dialog.showModal();
+  });
+  document.getElementById('closeHired').addEventListener('click', () => dialog.close());
+
+  function beeConfetti() {
+    const vw = window.innerWidth, vh = window.innerHeight;
+    for (let i = 0; i < 24; i++) {
+      const b = document.createElement('div');
+      b.className = 'confetti-bee';
+      b.innerHTML = '<svg viewBox="0 0 64 48"><use href="#bee"/></svg>';
+      document.body.appendChild(b);
+      const sx = vw / 2, sy = vh * 0.6;
+      const ex = Math.random() * vw, ey = -60 - Math.random() * 120;
+      const flip = ex < sx ? -1 : 1;
+      b.animate([
+        { transform: `translate(${sx}px, ${sy}px) scale(.3) scaleX(${flip})`, opacity: 1 },
+        { transform: `translate(${(sx + ex) / 2 + (Math.random() * 200 - 100)}px, ${vh * 0.3}px) scale(1) scaleX(${flip})`, opacity: 1, offset: 0.5 },
+        { transform: `translate(${ex}px, ${ey}px) scale(1) scaleX(${flip})`, opacity: 0.9 }
+      ], { duration: 1600 + Math.random() * 900, easing: 'cubic-bezier(.3,.6,.4,1)', delay: Math.random() * 250 })
+        .onfinish = () => b.remove();
+    }
+  }
+})();
+</script>
+</body>
+</html>
